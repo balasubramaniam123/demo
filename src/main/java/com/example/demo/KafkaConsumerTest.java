@@ -34,7 +34,7 @@ public class KafkaConsumerTest {
             System.out.println("polling the topic");
             ConsumerRecords<String,String> records=consumer.poll(Duration.ofMillis(100));
             for(ConsumerRecord<String,String> record: records){
-                System.out.println("message received");
+                System.out.println("message received ****");
                 System.out.println(", Value:" +record.value());
                 logger.info("Key: "+ record.key() + ", Value:" +record.value());
                 logger.info("Partition:" + record.partition()+",Offset:"+record.offset());
